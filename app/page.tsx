@@ -66,33 +66,33 @@
 // import { SiteFooter } from "@/components/site-footer"
 
 // const categories = [
-//   { 
-//     name: "Agriculture", 
-//     slug: "agriculture", 
+//   {
+//     name: "Agriculture",
+//     slug: "agriculture",
 //     image: "/agriculture.jpg",
 //     description: "Explore fresh greens, fruits, and grains."
 //   },
-//   { 
-//     name: "Meat & Poultry", 
-//     slug: "meat-poultry", 
+//   {
+//     name: "Meat & Poultry",
+//     slug: "meat-poultry",
 //     image: "/meat.jpg",
 //     description: "High-quality meat and poultry products."
 //   },
-//   { 
-//     name: "Dairy", 
-//     slug: "dairy", 
+//   {
+//     name: "Dairy",
+//     slug: "dairy",
 //     image: "/dairy.jpg",
 //     description: "Organic milk, cheese, butter, and more."
 //   },
-//   { 
-//     name: "Seafood", 
-//     slug: "seafood", 
+//   {
+//     name: "Seafood",
+//     slug: "seafood",
 //     image: "/seafood.jpg",
 //     description: "Fresh seafood straight from the source."
 //   },
-//   { 
-//     name: "Condiments", 
-//     slug: "condiments", 
+//   {
+//     name: "Condiments",
+//     slug: "condiments",
 //     image: "/condiments.jpg",
 //     description: "Enhance flavors with spices and sauces."
 //   },
@@ -148,21 +148,46 @@
 //   )
 // }
 
-"use client"
+"use client";
 
-import Link from "next/link"
-import Image from "next/image"
-import { HeroParallax } from "@/components/ui/hero-parallax"
-import { HomeNavBar } from "@/components/home-navbar"
-import { SiteFooter } from "@/components/site-footer"
+import Link from "next/link";
+import Image from "next/image";
+import { HeroParallax } from "@/components/ui/hero-parallax";
+import { HomeNavBar } from "@/components/home-navbar";
+import { SiteFooter } from "@/components/site-footer";
 
 const categories = [
-  { name: "Agriculture", slug: "agriculture", image: "/agriculture.jpg", description: "Explore fresh greens, fruits, and grains." },
-  { name: "Meat & Poultry", slug: "meat-poultry", image: "/meat.jpg", description: "High-quality meat and poultry products." },
-  { name: "Dairy", slug: "dairy", image: "/dairy.jpg", description: "Organic milk, cheese, butter, and more." },
-  { name: "Seafood", slug: "seafood", image: "/seafood.jpg", description: "Fresh seafood straight from the source." },
-  { name: "Condiments", slug: "condiments", image: "/condiments.jpg", description: "Enhance flavors with spices and sauces." },
-]
+  {
+    name: "Agriculture",
+    slug: "agriculture",
+    image: "/agriculture.jpg",
+    description: "Explore fresh greens, fruits, and grains.",
+  },
+  {
+    name: "Meat & Poultry",
+    slug: "meat-poultry",
+    image: "/meat.jpg",
+    description: "High-quality meat and poultry products.",
+  },
+  {
+    name: "Dairy",
+    slug: "dairy",
+    image: "/dairy.jpg",
+    description: "Organic milk, cheese, butter, and more.",
+  },
+  {
+    name: "Seafood",
+    slug: "seafood",
+    image: "/seafood.jpg",
+    description: "Fresh seafood straight from the source.",
+  },
+  {
+    name: "Condiments",
+    slug: "condiments",
+    image: "/condiments.jpg",
+    description: "Enhance flavors with spices and sauces.",
+  },
+];
 
 export default function HomePage() {
   return (
@@ -180,9 +205,12 @@ export default function HomePage() {
 
       {/* Main Content */}
       <main className="mx-auto max-w-7xl px-6 py-12">
-        <h1 className="text-3xl font-bold mb-8">Welcome to HEDAMO</h1>
+        <h1 className="text-3xl font-bold mb-8">
+          Hedamo <br/>Where transparency meets sustainability
+        </h1>
         <p className="text-lg text-gray-600 mb-10">
-          Discover a wide range of fresh products and explore categories tailored to your needs.
+          Discover a wide range of fresh products and explore categories
+          tailored to your needs.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -220,6 +248,5 @@ export default function HomePage() {
         ]}
       />
     </>
-  )
+  );
 }
-
