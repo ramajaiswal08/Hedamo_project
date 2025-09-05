@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
@@ -9,6 +8,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator";
 import {
   Home,
@@ -18,6 +19,7 @@ import {
   Settings,
   ChevronLeft,
   Menu,
+  Search,
 } from "lucide-react";
 
 export function HomeNavBar() {
@@ -86,6 +88,13 @@ export function HomeNavBar() {
             </nav>
           </SheetContent>
         </Sheet>
+        {/* <div className="md:ml-auto flex w-full max-w-sm items-center gap-2">
+          <Input placeholder="Search produce..." aria-label="Search produce" />
+          <Button className="bg-emerald-600 text-white hover:bg-emerald-700">
+            <Search className="mr-2 h-4 w-4" />
+            Search
+          </Button>
+        </div> */}
       </div>
     </header>
   );

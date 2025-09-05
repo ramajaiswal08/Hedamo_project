@@ -40,13 +40,13 @@ export function SiteFooter({ recommendations, categories }: Props) {
                 </Badge>
               ))}
             </div>
-            <div className="md:ml-auto flex w-full max-w-sm items-center gap-2">
+            {/* <div className="md:ml-auto flex w-full max-w-sm items-center gap-2">
               <Input placeholder="Search produce..." aria-label="Search produce" />
               <Button className="bg-emerald-600 text-white hover:bg-emerald-700">
                 <Search className="mr-2 h-4 w-4" />
                 Search
               </Button>
-            </div>
+            </div> */}
           </div>
         </section>
 

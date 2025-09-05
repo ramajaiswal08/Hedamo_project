@@ -1,30 +1,120 @@
+// // "use client"
+
+// // import Link from "next/link"
+// // import Image from "next/image"
+// // import { HomeNavBar } from "@/components/home-navbar"
+// // import { SiteFooter } from "@/components/site-footer"
+
+// // const categories = [
+// //   { name: "Agriculture", slug: "agriculture", image: "/agriculture.jpg" },
+// //   { name: "Meat & Poultry", slug: "meat-poultry", image: "/meat.jpg" },
+// //   { name: "Dairy", slug: "dairy", image: "/dairy.jpg" },
+// //   { name: "Seafood", slug: "seafood", image: "/seafood.jpg" },
+// //   { name: "Condiments", slug: "condiments", image: "/condiments.jpg" },
+// //   // { name: "Textiles", slug: "textiles", image: "/textiles.jpg" },
+// // ]
+
+// // export default function HomePage() {
+// //   return (
+// //     <>
+// //       <HomeNavBar />
+// //       <main className="mx-auto max-w-7xl px-6 py-12">
+// //         <h1 className="text-3xl font-bold mb-8">Welcome to HEDAMO</h1>
+
+// //         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+// //           {categories.map((cat) => (
+// //             <Link key={cat.slug} href={`/${cat.slug}`}>
+// //               <div className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg">
+// //                 <Image
+// //                   src={cat.image}
+// //                   alt={cat.name}
+// //                   width={600}
+// //                   height={400}
+// //                   className="w-full h-64 object-cover transform transition-transform duration-300 group-hover:scale-105"
+// //                 />
+// //                 <div className="absolute bottom-3 left-3 text-white font-semibold text-lg drop-shadow-md">
+// //                   {cat.name}
+// //                 </div>
+// //               </div>
+// //             </Link>
+// //           ))}
+// //         </div>
+// //       </main>
+
+// //       <SiteFooter
+// //         recommendations={[
+// //           { name: "Fresh Greens", href: "/agriculture" },
+// //           { name: "Organic Picks", href: "/condiments" },
+// //           { name: "Salad Box", href: "/agriculture" },
+// //         ]}
+// //         categories={[
+// //           { name: "Vegetables", href: "/agriculture" },
+// //           { name: "Meat-Poultry", href: "/meat-poultry" },
+// //           { name: "Dairy", href: "/dairy" },
+// //         ]}
+// //       />
+// //     </>
+// //   )
+// // }
+
 // "use client"
 
 // import Link from "next/link"
+// import { HeroParallax } from "@/components/ui/hero-parallax";
 // import Image from "next/image"
 // import { HomeNavBar } from "@/components/home-navbar"
 // import { SiteFooter } from "@/components/site-footer"
 
 // const categories = [
-//   { name: "Agriculture", slug: "agriculture", image: "/agriculture.jpg" },
-//   { name: "Meat & Poultry", slug: "meat-poultry", image: "/meat.jpg" },
-//   { name: "Dairy", slug: "dairy", image: "/dairy.jpg" },
-//   { name: "Seafood", slug: "seafood", image: "/seafood.jpg" },
-//   { name: "Condiments", slug: "condiments", image: "/condiments.jpg" },
-//   // { name: "Textiles", slug: "textiles", image: "/textiles.jpg" },
+//   { 
+//     name: "Agriculture", 
+//     slug: "agriculture", 
+//     image: "/agriculture.jpg",
+//     description: "Explore fresh greens, fruits, and grains."
+//   },
+//   { 
+//     name: "Meat & Poultry", 
+//     slug: "meat-poultry", 
+//     image: "/meat.jpg",
+//     description: "High-quality meat and poultry products."
+//   },
+//   { 
+//     name: "Dairy", 
+//     slug: "dairy", 
+//     image: "/dairy.jpg",
+//     description: "Organic milk, cheese, butter, and more."
+//   },
+//   { 
+//     name: "Seafood", 
+//     slug: "seafood", 
+//     image: "/seafood.jpg",
+//     description: "Fresh seafood straight from the source."
+//   },
+//   { 
+//     name: "Condiments", 
+//     slug: "condiments", 
+//     image: "/condiments.jpg",
+//     description: "Enhance flavors with spices and sauces."
+//   },
 // ]
 
 // export default function HomePage() {
 //   return (
 //     <>
+
 //       <HomeNavBar />
+//        {/* Hero Section */}
+//       <HeroParallax categories={categories} />
 //       <main className="mx-auto max-w-7xl px-6 py-12">
 //         <h1 className="text-3xl font-bold mb-8">Welcome to HEDAMO</h1>
+//         <p className="text-lg text-gray-600 mb-10">
+//           Discover a wide range of fresh products and explore categories tailored to your needs.
+//         </p>
 
 //         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 //           {categories.map((cat) => (
 //             <Link key={cat.slug} href={`/${cat.slug}`}>
-//               <div className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg">
+//               <div className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg bg-white">
 //                 <Image
 //                   src={cat.image}
 //                   alt={cat.name}
@@ -32,8 +122,9 @@
 //                   height={400}
 //                   className="w-full h-64 object-cover transform transition-transform duration-300 group-hover:scale-105"
 //                 />
-//                 <div className="absolute bottom-3 left-3 text-white font-semibold text-lg drop-shadow-md">
-//                   {cat.name}
+//                 <div className="p-4">
+//                   <h2 className="text-xl font-semibold">{cat.name}</h2>
+//                   <p className="text-sm text-gray-600">{cat.description}</p>
 //                 </div>
 //               </div>
 //             </Link>
@@ -61,46 +152,33 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import { HeroParallax } from "@/components/ui/hero-parallax"
 import { HomeNavBar } from "@/components/home-navbar"
 import { SiteFooter } from "@/components/site-footer"
 
 const categories = [
-  { 
-    name: "Agriculture", 
-    slug: "agriculture", 
-    image: "/agriculture.jpg",
-    description: "Explore fresh greens, fruits, and grains."
-  },
-  { 
-    name: "Meat & Poultry", 
-    slug: "meat-poultry", 
-    image: "/meat.jpg",
-    description: "High-quality meat and poultry products."
-  },
-  { 
-    name: "Dairy", 
-    slug: "dairy", 
-    image: "/dairy.jpg",
-    description: "Organic milk, cheese, butter, and more."
-  },
-  { 
-    name: "Seafood", 
-    slug: "seafood", 
-    image: "/seafood.jpg",
-    description: "Fresh seafood straight from the source."
-  },
-  { 
-    name: "Condiments", 
-    slug: "condiments", 
-    image: "/condiments.jpg",
-    description: "Enhance flavors with spices and sauces."
-  },
+  { name: "Agriculture", slug: "agriculture", image: "/agriculture.jpg", description: "Explore fresh greens, fruits, and grains." },
+  { name: "Meat & Poultry", slug: "meat-poultry", image: "/meat.jpg", description: "High-quality meat and poultry products." },
+  { name: "Dairy", slug: "dairy", image: "/dairy.jpg", description: "Organic milk, cheese, butter, and more." },
+  { name: "Seafood", slug: "seafood", image: "/seafood.jpg", description: "Fresh seafood straight from the source." },
+  { name: "Condiments", slug: "condiments", image: "/condiments.jpg", description: "Enhance flavors with spices and sauces." },
 ]
 
 export default function HomePage() {
   return (
     <>
       <HomeNavBar />
+
+      {/* Hero Section */}
+      <HeroParallax
+        products={categories.map((cat) => ({
+          title: cat.name,
+          link: `/${cat.slug}`,
+          thumbnail: cat.image,
+        }))}
+      />
+
+      {/* Main Content */}
       <main className="mx-auto max-w-7xl px-6 py-12">
         <h1 className="text-3xl font-bold mb-8">Welcome to HEDAMO</h1>
         <p className="text-lg text-gray-600 mb-10">
@@ -128,6 +206,7 @@ export default function HomePage() {
         </div>
       </main>
 
+      {/* Footer */}
       <SiteFooter
         recommendations={[
           { name: "Fresh Greens", href: "/agriculture" },
@@ -143,3 +222,4 @@ export default function HomePage() {
     </>
   )
 }
+
